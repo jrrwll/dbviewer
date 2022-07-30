@@ -1,0 +1,24 @@
+{
+    "common": {
+        "head": {
+            "home": "首页",
+            "shorten": "短网址",
+            "network": "网络",
+            "crypt": "加解密",
+            "word": "单词"
+        },
+        "sidebar": {
+            "all": "全部",
+            "other": "其他",
+            "trash": "回收站"
+        }
+    },
+    "home": {
+        "ip": {
+            "ip_query": "IP查询",
+            "your_ip": "您的IP",
+            "unknown": "未知",
+            "from": "来自"
+        }
+    }
+}

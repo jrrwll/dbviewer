@@ -1,0 +1,24 @@
+{
+    "common": {
+        "head": {
+            "home": "Home",
+            "shorten": "Shorten URLs",
+            "network": "Network",
+            "crypt": "Crypt",
+            "word": "Word"
+        },
+        "sidebar": {
+            "all": "All",
+            "other": "Other",
+            "trash": "Trash"
+        }
+    },
+    "home": {
+        "ip": {
+            "ip_query": "IP Query",
+            "your_ip": "Your IP",
+            "unknown": "Unknown",
+            "from": "From"
+        }
+    }
+}

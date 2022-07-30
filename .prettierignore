@@ -1,0 +1,8 @@
+build
+dist
+out
+node_modules
+*.min.
+packages/**/*.ejs
+.idea
+src-tauri
