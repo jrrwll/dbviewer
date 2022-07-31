@@ -1,9 +1,9 @@
-import {useEffect} from 'react'
+import React, { useEffect } from 'react'
 
 export default function () {
     useEffect(() => {
+        // nop
     })
 
-    return <div>
-    </div>
+    return <div />
 }

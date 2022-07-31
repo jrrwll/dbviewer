@@ -59,7 +59,7 @@
                 "fullscreen": false,
                 "height": 600,
                 "resizable": true,
-                "title": "DB Viewer",
+                "title": "Database Viewer",
                 "width": 800
             }
         ]

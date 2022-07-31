@@ -13,6 +13,8 @@ module.exports = {
         "prefer-destructuring": OFF,
         "camelcase": OFF,
         "no-nested-ternary": OFF,
+        "no-case-declarations": WARNING,
+        "no-return-assign": WARNING,
         "import/no-unresolved": OFF, // eslint can't handle alias path without third deps.
         "import/prefer-default-export": WARNING,
         '@typescript-eslint/no-explicit-any': OFF,

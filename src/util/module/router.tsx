@@ -21,20 +21,20 @@ const routes = [
 ];
 */
 export interface RouteItem<T> {
-    path: string;
-    component?: T;
-    redirect?: string | string[];
-    children?: RouteItem<T>[];
+    path: string
+    component?: T
+    redirect?: string | string[]
+    children?: RouteItem<T>[]
 }
 
 export interface PathRoute<T> {
-    path: string;
-    component: T;
+    path: string
+    component: T
 }
 
 export interface FromToRoute {
-    from: string;
-    to: string;
+    from: string
+    to: string
 }
 
 function renderRoute<T>(
@@ -42,24 +42,24 @@ function renderRoute<T>(
     currentPath: string,
     children: (PathRoute<T> | FromToRoute)[]
 ) {
-    let path = `${currentPath}/${item.path}`;
+    let path = `${currentPath}/${item.path}`
     // replace [/]+ to /, such as /// to /
-    path = path.replace(/\/+/g, '/');
+    path = path.replace(/\/+/g, '/')
 
     if (item.component) {
-        children.push({ path, component: item.component });
+        children.push({ path, component: item.component })
     }
     if (item.children) {
-        item.children.forEach((r) => renderRoute(r, path, children));
+        item.children.forEach((r) => renderRoute(r, path, children))
     }
     if (item.redirect) {
-        const { redirect } = item;
+        const { redirect } = item
         if (typeof redirect === 'string') {
-            children.push({ from: redirect, to: path });
+            children.push({ from: redirect, to: path })
         } else if (redirect) {
             redirect.forEach((it) => {
-                children.push({ from: it, to: path });
-            });
+                children.push({ from: it, to: path })
+            })
         }
     }
 }
@@ -68,7 +68,7 @@ export function renderRoutes<T>(
     routeItems: RouteItem<T>[],
     currentPath: string
 ): (PathRoute<T> | FromToRoute)[] {
-    const children: (PathRoute<T> | FromToRoute)[] = [];
-    routeItems.forEach((item) => renderRoute(item, currentPath, children));
-    return children;
+    const children: (PathRoute<T> | FromToRoute)[] = []
+    routeItems.forEach((item) => renderRoute(item, currentPath, children))
+    return children
 }
